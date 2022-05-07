@@ -9,22 +9,21 @@ $footer_mob: 10rem;
 
 //---------------------------------------------fonts
 $font_path: "../fonts/";
-$font_1: 'ProximaNova-Light', sans-serif;
-$font_2: 'ProximaNova-SemiBold', sans-serif;
-$font_3: 'New-YorkerC', sans-serif;
+$font_1: 'Roboto', sans-serif;
+$font_2: 'Robotolight', sans-serif;
+$font_3: 'AkzidenzGroteskPro-Regular', sans-serif;
 $font_size_base: 1.8rem;
 //---------------------------------------------fonts###
 
 //---------------------------------------------colors
 $white: #fff;
-$black: #1A191D;
+$black: #232323;
 $gray:  #c2c2c2;
-
 $gold: #F1D465;
 
-$color_text_base: $white;
-$color_link_base: $gold;
-$body_bg: $black;
+$color_text_base: $black;
+$color_link_base: $black;
+$body_bg: $white;
 //---------------------------------------------colors###
 
 //---------------------------------------------z-index
@@ -36,8 +35,15 @@ $z-index: (
 //---------------------------------------------z-index###
 
 //---------------------------------------------layout
-$page_width: 158rem;
+$page_width: 1720px;
 
+// $wrapp: (
+// 	width: 100%,
+// 	max-width: 1720px,
+// 	padding-left: 100px,
+// 	padding-right: 100px
+	
+// 	);
 //---------------------------------------------layout###
 
 //---------------------------------------------global values

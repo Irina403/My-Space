@@ -1,0 +1,44 @@
+.header{
+    z-index: 99999;
+}
+.wrapp {
+    width: 100%;
+    max-width: 1720px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__list{
+        display: flex;
+    }
+    &__item{
+        font-size: 18px;
+        margin-right: 70px;
+       
+    }
+    &__item a{
+        color: $black;
+    }
+  }
+
+.main{
+    &__head{
+        font-size: 60px;
+        color: $black;
+        font-family: $font_3;
+        font-weight: 400;
+        line-height: 77px;
+    }
+}
+.nav__tel a{
+    font-size: 20px;
+    color: $black;
+}
+.nav__call{
+    font-size: 20px;
+    line-height: 24px;
+}
