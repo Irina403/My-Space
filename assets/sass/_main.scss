@@ -27,11 +27,26 @@
 
 .main{
     &__head{
+        width: 50%;
         font-size: 60px;
         color: $black;
         font-family: $font_3;
         font-weight: 400;
         line-height: 77px;
+    }
+    &__image img{
+        width: 100%;
+    }
+    &__block{
+        display: flex;
+        align-items:center;
+    }
+    &__text{
+        font-size: 20px;
+        font-family: $font_2;
+        width: 50%;
+        line-height: 23.44px;
+        
     }
 }
 .nav__tel a{
@@ -41,4 +56,10 @@
 .nav__call{
     font-size: 20px;
     line-height: 24px;
+}
+
+.company{
+    &__company-head{
+        font-size: 60px;
+    }
 }
