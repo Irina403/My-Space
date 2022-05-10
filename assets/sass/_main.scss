@@ -1,30 +1,3 @@
-.header{
-    z-index: 99999;
-}
-.wrapp {
-    width: 100%;
-    max-width: 1720px;
-    padding-left: 100px;
-    padding-right: 100px;
-}
-
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    &__list{
-        display: flex;
-    }
-    &__item{
-        font-size: 18px;
-        margin-right: 70px;
-       
-    }
-    &__item a{
-        color: $black;
-    }
-  }
-
 .main{
     &__head{
         width: 50%;
@@ -67,8 +40,6 @@
 
     &__block{
         display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
     }
     &__text::after{
         margin-top: 30px;
@@ -79,31 +50,101 @@
         background-color:black;
     }
     &__company-head{
+        width: 30%;
         padding-bottom: 95px;
         font-size: 60px;
-        max-width: 430px;
-        width: 100%;
+    }
+    &__task{
+        margin-top: 95px;
+    }
+    &__col-right{
+        width: 70%;
+        margin-left: 180px;
+        margin-top: 177px;
     }
 }
 
 .companyDescription{
-    display: flex;
-    justify-content: space-between;
-
     &__block{
-        width: 45%;
-        // max-width: 490px;
-        // width: 100%;
+        margin-top: 132px;
         display: flex;
         justify-content: space-between;
+        width: 100%;
     }
     &__text{
+        width: 48%;
         font-family: $font_2;
+        line-height: 23.44px;
+    }
+    &__text img{
+        margin-top: 40px;
     }
 }
 
-.companyDescription img{
-    max-width: 430px;
-    width: 100%;
-    height: 100%;
+.button a{
+    font-size: 35px;
+    line-height: 45px;
+    font-family: $font_3;
+    font-weight: 400;
+    color: $black;
+}
+
+.advantages{
+    &__row{
+        margin-top: 214px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    &__col {
+        width: 32%; 
+        border: 1px solid #000;
+        border-radius: 50%;
+        margin-right: 10px;
+  
+        // @include bp($point_1) {
+        //     width: 100%;
+        //     max-width: 420px;
+        //     height: 40px;
+        //     margin: auto;
+        // }
+    }
+    &__body{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &__item{
+        padding-top: 100%; 
+        position: relative;
+    }
+    &__title{
+        font-size: 35px;
+        @include bp($point_1) {
+            font-size: 28px;
+        }
+    }
+    &__text{
+        margin-top: 40px;
+        font-size: 20px;
+        font-family: $font_2;
+        text-align: center;
+        @include bp($point_1) {
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    }
+    &__textBlock{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        padding: 0px 64px;
+        @include bp($point_1) {
+            padding: 0px 35px;
+        }
+    }
 }

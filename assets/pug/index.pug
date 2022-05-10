@@ -18,26 +18,64 @@ block content_block
 		.main__image
 			img(src="i/main-img.jpg", alt="")
 
-		.company
-			.company__block
-				.company__company-head О компании My Space
-				.company__text Мы проектируем, производим и продаем мебель . <br> Являемся молодым и амбициозным коллективом, работающим на результат.
-			.company__task.companyDescription
-				img(src="i/about-img1.jpg", alt="")
-				.companyDescription__block
-					.companyDescription__text 
-						p Наша основная задача - выпускать качественный, экологичный продукт с интересными дизайнерскими решениями, которые удовлетворят самого взыскательного потребителя.
-						div 
-							img(src="i/about-img2.jpg", alt="")
+			.company
+				.company__block
+					.company__company-head О компании My Space
+						.company__task
+							img(src="i/about-img1.jpg", alt="")
+						.company__button.button
+							a(href="#") Заказать мебель
+								+icon('arrow-cicle')
+							
 					
-					.companyDescription__text 
-						p Имеем свою линейку продукции в стиле лофт. Также мы работаем по индивидуальным эскизам и готовы помочь воплотить любую задумку.
-						div 
-							img(src="i/about-img3.jpg", alt="")
+					.company__col-right
+						.company__text Мы проектируем, производим и продаем мебель . <br> Являемся молодым и амбициозным коллективом, работающим на результат.
+						.companyDescription
+							.companyDescription__block
+								.companyDescription__text 
+									p Наша основная задача - выпускать качественный, экологичный продукт с интересными дизайнерскими решениями, которые удовлетворят самого взыскательного потребителя.
+									div 
+										img(src="i/about-img2.jpg", alt="")
+								
+								.companyDescription__text 
+									p Имеем свою линейку продукции в стиле лофт. 
+									
+									<br> Также мы работаем по индивидуальным эскизам и готовы помочь воплотить любую задумку.
+									div 
+										img(src="i/about-img3.jpg", alt="")
 
 					
-				
+	section.advantages.wrapp  
+		.advantages__row 
+			.advantages__col
+				.advantages__item
+					.advantages__body
+						.advantages__img 
+							img(src="i/01-img.png", alt="")
+						.advantages__textBlock
+							.advantages__title 01
+							.advantages__title Свое производство
+							.advantages__text Мы специализируемся на работе с натуральным массивом дерева и сварке металлокаркасов любой сложности. Наш парк оборудования постоянно обновляется и модернизируется.
 
+			.advantages__col
+				.advantages__item
+					.advantages__body
+						.advantages__img 
+							img(src="i/02-img.png", alt="")
+						.advantages__textBlock
+							.advantages__title 02
+							.advantages__title Высокое качество
+							.advantages__text Каждый член нашей команды, используя весь накопленный опыт, работает на то, чтобы Вы не только получили изделие высокого качества, но и удовольствие от самого процесса оформления заказа.
+								
+			.advantages__col
+				.advantages__item
+					.advantages__body 
+						.advantages__img 
+							img(src="i/03-img.png", alt="")
+						.advantages__textBlock
+							.advantages__title 03
+							.advantages__title Особый подход
+							.advantages__text Мы заботимся о покупателях, ценим их предпочтения и готов помочь каждому в поиске решений для создания первоклассных интерьеров.
 
 
 				

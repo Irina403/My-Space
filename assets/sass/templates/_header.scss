@@ -3,7 +3,7 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-
+	background-color:#fff;
 	height: $header;
 	width: 100%;
 
@@ -15,3 +15,29 @@
 		height: $header_mob;
 	}
 }
+
+.wrapp {
+    width: 100%;
+    max-width: 1720px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__list{
+        display: flex;
+    }
+    &__item{
+        font-size: 18px;
+        margin-right: 70px;
+       
+    }
+    &__item a{
+        color: $black;
+    }
+  }
