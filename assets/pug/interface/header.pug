@@ -1,28 +1,52 @@
 header.header 
     .section_in 
         .header_main 
-            section.nav 
+            section.nav.wrapp 
                 .nav__logo
                     a(href="#") 
                         +icon('my-Space')
 
                 .nav__list 
+                    ul.nav__item
+                        li 
+                            a(href="#") О нас
                     .nav__item 
-                        a(href="#") О нас
+                        li
+                            a(href="#") Преимущества
                     .nav__item 
-                        a(href="#") Преимущества
-                    .nav__item 
-                        a(href="#") Готовые решения
-                    .nav__item 
-                        a(href="#") Все работы
+                        li
+                            a(href="#") Готовые решения
+                    .nav__item
+                        li
+                            a(href="#") Все работы
                 
                 .nav__tel 
                     a(href="tel:+70000000000") +7 000 000 00 00
                 
                 .nav__button
                     a(href="#").nav__call Заказать звонок 
-                    
+
+        
+    
+.menuMobile
+    .menuMobile__wrapp
+        a(href="#").menuMobile__triger
+        .menuMobile__popup 
+            a(href="#").menuMoble__close
+        ul.menuMobile__list 
+            li 
+                a(href="#") О нас
+            li
+                a(href="#") Преимущества
+            li
+                a(href="#") Готовые решения
+            li
+                a(href="#") Все работы
+        
 
 
                 
+
+
             
+        

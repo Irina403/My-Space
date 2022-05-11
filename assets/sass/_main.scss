@@ -1,16 +1,20 @@
 .main{
     &__head{
-        width: 50%;
+        width: 100%;
         font-size: 60px;
         color: $black;
         font-family: $font_3;
         font-weight: 400;
         line-height: 77px;
+        @include bp($point_1) {
+            font-size: 50px;
+        }
     }
     &__image img{
         width: 100%;
     }
     &__block{
+        margin-top: 50px;
         display: flex;
         align-items:center;
         margin-bottom: 50px;
@@ -21,8 +25,12 @@
     &__text{
         font-size: 20px;
         font-family: $font_2;
-        width: 50%;
+        width: 100%;
         line-height: 23.44px;
+        @include bp($point_1) {
+            font-size: 15px;
+            line-height: 20.44px;
+        }
         
     }
 }
@@ -43,6 +51,9 @@
     }
     &__text{
         font-size: 25px;
+        @include bp($point_1) {
+            font-size: 20px;
+        }
     }
     &__text::after{
         margin-top: 30px;
@@ -53,7 +64,7 @@
         background-color:black;
     }
     &__company-head{
-        width: 30%;
+        // width: 30%;
         padding-bottom: 95px;
         font-size: 60px;
         font-family: $font_3;
@@ -64,7 +75,11 @@
     &__col-right{
         width: 70%;
         margin-left: 180px;
-        margin-top: 177px;
+        margin-top: 125px;
+        @include bp($point_1) {
+            margin-left: 50px;
+            margin-top: 171px;
+        }
     }
 }
 
@@ -79,6 +94,11 @@
         width: 48%;
         font-family: $font_2;
         line-height: 23.44px;
+        @include bp($point_1) {
+            width: 49%;
+            font-size: 15px;
+            line-height: 18.44px;
+        }
     }
     &__text img{
         margin-top: 40px;
@@ -91,6 +111,7 @@
     font-family: $font_3;
     font-weight: 400;
     color: $black;
+    display: flex;
 }
 
 .advantages{
@@ -100,18 +121,17 @@
         flex-wrap: wrap;
         justify-content: space-between;
     }
+    &__img{
+        height: 130px;
+        @include bp($point_1) {
+           margin-top: -20px;
+        } 
+    }
     &__col {
         width: 32%; 
         border: 1px solid #000;
         border-radius: 50%;
         margin-right: 10px;
-  
-        // @include bp($point_1) {
-        //     width: 100%;
-        //     max-width: 420px;
-        //     height: 40px;
-        //     margin: auto;
-        // }
     }
     &__body{
         position: absolute;
@@ -141,8 +161,9 @@
         Line-height: 23.44px;
         width: 300;
         @include bp($point_1) {
-            font-size: 16px;
+            font-size: 15px;
             margin-top: 20px;
+            Line-height: 18px;
         }
     }
     &__textBlock{
@@ -150,8 +171,94 @@
         flex-direction: column;
         align-items:center;
         padding: 0px 34px;
-        // @include bp($point_1) {
-        //     padding: 0px 35px;
-        // }
+        @include bp($point_1) {
+            margin-top: 0px;
+        }
+    }
+}
+.menuMobile__triger{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color:#000;
+}
+.catalog{
+    margin-top: 200px;
+    &__row{
+        position: relative; 
+        margin-top: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items:flex-end
+    }
+    &__col-right{
+        width: 55%;
+        @include bp($point_1) {
+            width: 50%;
+        }
+    }
+    &__description{
+        margin-bottom: 20px;
+        font-size: 20px;
+        font-family: $font_2;
+        line-height: 23.44px;
+        font-weight: 300;
+    }
+    &__item-right{
+        margin-top: 45px;
+    }
+    &__item-right img{
+        height: auto;
+        width: 100%;
+        max-width: 850px;
+    }
+
+    &__item-style{
+        margin-top: 30px;
+    }
+    &__product-center{
+       
+    }
+    &__product-center img{
+        margin: auto;
+        position: absolute;
+        top: 75%; 
+        left: 0; 
+        bottom: 0; 
+        right: 20%;
+        height: auto;
+        width: 100%;
+        max-width: 320px;
+        @include bp($point_1) {
+            right: 15%;
+        }
+    }
+    }
+
+.titleSectionBlock{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 60px;
+    font-family: $font_3;
+    &:after{
+        bottom:0;
+        position: absolute;
+        display: block;
+        content:'';
+        width: 100%;
+        height: 1px;
+        background-color:#000;
+    }
+    &__num{
+        background-color:$black;
+        color:#fff;
+        padding: 10px 100px;
+    }
+    &__title{
+        padding-right: 100px;
     }
 }

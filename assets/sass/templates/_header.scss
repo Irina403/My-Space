@@ -6,16 +6,38 @@
 	background-color:#fff;
 	height: $header;
 	width: 100%;
-
+	z-index: 9999;
+	display: flex;
+	align-items: center;
 	font-size: 1rem;
-
+	border-bottom: 1px solid #000;
 	will-change: transform;
 
 	@include bp($point_2) {
 		height: $header_mob;
 	}
-}
 
+	&_main{
+		@include bp($point_4) {
+			display: none;
+		}
+	}
+}
+.menuMobile{
+	display: none;	
+	@include bp($point_4) {
+		display: block;
+		z-index: 99999;
+	}
+}
+.menuMobile{
+	&__list{
+		margin-top: 25px;
+		background-color:#fff;
+		text-align: end;
+		margin-right: 15px;
+	}
+}
 .wrapp {
     width: 100%;
     max-width: 1720px;
@@ -26,18 +48,92 @@
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+    // display: flex;
+    // justify-content: space-between;
+    // align-items: center;
+	background-color:#fff;
     &__list{
+		position: relative;
         display: flex;
+		margin-left: -100px;
+		width: 100%;
+    }
+	&__list:after{
+		top: -20px;
+		bottom:0;
+		right: 0px;
+		position: absolute;
+		display: block;
+		content:'';
+		width: 1px;
+		height: 62px;
+		background-color:#000;
     }
     &__item{
         font-size: 18px;
         margin-right: 70px;
+		@include bp($point_1) {
+			margin-right: 40px;
+		 }
        
     }
     &__item a{
         color: $black;
     }
+	&__logo{
+		position: relative;
+		width: 200px;
+		// height: 0px;
+		display: flex;
+		align-items:center;
+		@include bp($point_1) {
+			width: 130px;
+		 }
+	}
+	&__logo::after{
+		top: -19px;
+		bottom:0;
+		right: -20px;
+		position: absolute;
+		display: block;
+		content:'';
+		width: 1px;
+		height: 62px;
+		background-color:#000;
+		// border-right: 1px solid #000;
+	}
+	&__button{
+		top: 0;
+		display: flex;
+		align-items:center;
+		justify-content: center;
+		position: absolute;
+		right: 0;
+		height: 60px;
+		background-color: #232323;
+		max-width: 362px;
+		width: 100%;
+		@include bp($point_1) {
+           width: 262px;
+        }
+	}
+	&__button a{ 
+		color: #fff;
+	}
+	&__tel {
+		margin-left: -50px;
+		color: #000;
+	}
+
   }
+
+.menuMobile{
+	position: relative;
+
+	&__wrapp{
+		position: absolute;
+		right: 0;
+	}
+}
