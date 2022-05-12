@@ -21,6 +21,9 @@
         @include bp($point_1) {
             font-size: 14px;
         }
+        @include bp($point_4) {
+           flex-wrap: wrap;
+        }
     }
     &__text{
         font-size: 20px;
@@ -48,6 +51,9 @@
 
     &__block{
         display: flex;
+        @include bp($point_4) {
+            flex-wrap: wrap;
+         }
     }
     &__text{
         font-size: 25px;
@@ -64,13 +70,18 @@
         background-color:black;
     }
     &__company-head{
-        // width: 30%;
         padding-bottom: 95px;
         font-size: 60px;
         font-family: $font_3;
+        @include bp($point_4) {
+            padding-bottom: 15px;
+        }
     }
     &__task{
         margin-top: 95px;
+        @include bp($point_4) {
+            margin-top: 15px;
+        }
     }
     &__col-right{
         width: 70%;
@@ -79,6 +90,11 @@
         @include bp($point_1) {
             margin-left: 50px;
             margin-top: 171px;
+        }
+        @include bp($point_4) {
+            width: 100%;
+            margin-left: 10px;
+            margin-top: 15px;
         }
     }
 }
@@ -89,6 +105,9 @@
         display: flex;
         justify-content: space-between;
         width: 100%;
+        @include bp($point_4) {
+            flex-wrap: wrap;
+         }
     }
     &__text{
         width: 48%;
@@ -98,6 +117,9 @@
             width: 49%;
             font-size: 15px;
             line-height: 18.44px;
+        }
+        @include bp($point_4) {
+           width: 100%;
         }
     }
     &__text img{
@@ -174,6 +196,9 @@
         @include bp($point_1) {
             margin-top: 0px;
         }
+        @include bp($point_4) {
+            flex-wrap: wrap;
+         }
     }
 }
 .menuMobile__triger{
@@ -192,7 +217,10 @@
         margin-top: 90px;
         display: flex;
         justify-content: space-between;
-        align-items:flex-end
+        align-items:flex-end;
+        @include bp($point_4) {
+            flex-wrap: wrap;
+         }
     }
     &__col-right{
         width: 55%;
@@ -244,6 +272,9 @@
     justify-content: space-between;
     font-size: 60px;
     font-family: $font_3;
+    @include bp($point_4) {
+        flex-wrap: wrap;
+     }
     &:after{
         bottom:0;
         position: absolute;

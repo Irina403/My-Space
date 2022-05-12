@@ -24,11 +24,15 @@
 	}
 }
 .menuMobile{
-	display: none;	
 	@include bp($point_4) {
-		display: block;
 		z-index: 99999;
 	}
+}
+.menuMobile__list{
+	display: none;
+}
+.menuMobile__list.active{
+	display: block;
 }
 .menuMobile{
 	&__list{
@@ -45,6 +49,10 @@
     padding-right: 100px;
     margin-left: auto;
     margin-right: auto;
+	@include bp($point_4) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 }
 
 .nav {

@@ -106,3 +106,7 @@ $(function() {
 		pageWidget(pageWidgetArray);
 	}
 });
+
+$('.menuMobile__triger').click(function(){
+	$('.menuMobile__list').toggleClass('active');
+});
