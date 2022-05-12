@@ -1,14 +1,15 @@
 .main{
     &__head{
-        width: 100%;
-        font-size: 60px;
+        font-size: 6rem;
         color: $black;
         font-family: $font_3;
         font-weight: 400;
         line-height: 77px;
         @include bp($point_1) {
-            font-size: 50px;
+            // font-size: 50px;
+            line-height: 55px;
         }
+ 
     }
     &__image img{
         width: 100%;
@@ -18,31 +19,46 @@
         display: flex;
         align-items:center;
         margin-bottom: 50px;
-        @include bp($point_1) {
-            font-size: 14px;
-        }
-        @include bp($point_4) {
-           flex-wrap: wrap;
+        justify-content: space-between;
+        // @include bp($point_1) {
+        //     font-size: 14px;
+        // }
+        @include bp($point_3) {
+            flex-wrap: wrap;
+            margin-bottom: 20px;
         }
     }
     &__text{
-        font-size: 20px;
+        font-size: 2rem;
         font-family: $font_2;
-        width: 100%;
+        width: 55rem;
         line-height: 23.44px;
-        @include bp($point_1) {
+        padding-left: 10px;
+        padding-right: 30px;
+        width: 35%;
+        @include bp($point_2) {
             font-size: 15px;
-            line-height: 20.44px;
+        }
+        @include bp($point_3) {
+           margin-top: 20px;
+           margin-bottom: 20px;
+           padding-left: 0px;
         }
         
     }
+    &__arrow a{
+        display: flex;
+        height: 100%;
+        padding: 2rem 0;
+
+    }
 }
 .nav__tel a{
-    font-size: 20px;
+    font-size: 2rem;
     color: $black;
 }
 .nav__call{
-    font-size: 20px;
+    font-size: 2rem;
     line-height: 24px;
 }
 
@@ -56,10 +72,10 @@
          }
     }
     &__text{
-        font-size: 25px;
-        @include bp($point_1) {
-            font-size: 20px;
-        }
+        font-size: 2.5rem;
+        // @include bp($point_1) {
+        //     font-size: 20px;
+        // }
     }
     &__text::after{
         margin-top: 30px;
@@ -71,8 +87,9 @@
     }
     &__company-head{
         padding-bottom: 95px;
-        font-size: 60px;
+        font-size: 6rem;
         font-family: $font_3;
+        margin-right: 10rem;
         @include bp($point_4) {
             padding-bottom: 15px;
         }
@@ -84,9 +101,8 @@
         }
     }
     &__col-right{
-        width: 70%;
-        margin-left: 180px;
-        margin-top: 125px;
+        width: 60%;
+        margin-top: 150px;
         @include bp($point_1) {
             margin-left: 50px;
             margin-top: 171px;
@@ -98,10 +114,14 @@
         }
     }
 }
-
+.icon-arrow-cicle{
+    fill: none !important;
+    stroke: #000;
+    margin-left: 20px;
+}
 .companyDescription{
     &__block{
-        margin-top: 132px;
+        margin-top: 15%;
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -110,7 +130,7 @@
          }
     }
     &__text{
-        width: 48%;
+        // width: 48%;
         font-family: $font_2;
         line-height: 23.44px;
         @include bp($point_1) {
@@ -127,13 +147,8 @@
     }
 }
 
-.button a{
-    font-size: 35px;
-    line-height: 45px;
-    font-family: $font_3;
-    font-weight: 400;
-    color: $black;
-    display: flex;
+.button{
+    @include btn;
 }
 
 .advantages{
@@ -142,6 +157,9 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @include bp($point_1) {
+           justify-content: space-around;
+        }
     }
     &__img{
         height: 130px;
@@ -154,6 +172,14 @@
         border: 1px solid #000;
         border-radius: 50%;
         margin-right: 10px;
+        @include bp($point_1) {
+            width: 32%;
+            margin-top: 5%;
+        }
+        @include bp($point_2) {
+            width: 40%;
+            // margin-top: 5%;
+        }
     }
     &__body{
         position: absolute;
@@ -169,23 +195,28 @@
         position: relative;
     }
     &__title{
-        font-size: 35px;
+        font-size: 3.5rem;
         font-family: $font_3 !important;
-        @include bp($point_1) {
-            font-size: 28px;
-        }
+        // @include bp($point_1) {
+        //     font-size: 28px;
+        // }
     }
     &__text{
         margin-top: 20px;
-        font-size: 20px;
+        font-size: 2rem;
         font-family: $font_2;
         text-align: center;
         Line-height: 23.44px;
         width: 300;
-        @include bp($point_1) {
-            font-size: 15px;
+        @include bp($point_0) {
+            // font-size: 16px;
             margin-top: 20px;
-            Line-height: 18px;
+            Line-height: 22px;
+        }
+        @include bp($point_1) {
+            // font-size: 23px;
+            margin-top: 20px;
+            Line-height: 26px;
         }
     }
     &__textBlock{
@@ -194,25 +225,23 @@
         align-items:center;
         padding: 0px 34px;
         @include bp($point_1) {
-            margin-top: 0px;
+            margin-top: -20px;
         }
         @include bp($point_4) {
             flex-wrap: wrap;
          }
     }
 }
-.menuMobile__triger{
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    display: block;
-    width: 30px;
-    height: 3px;
-    background-color:#000;
-}
+
 .catalog{
     margin-top: 200px;
     &__row{
+        width: 100%;
+        max-width: 1720px;
+        padding-left: 100px;
+        // padding-right: 100px;
+        margin-left: auto;
+        margin-right: auto;
         position: relative; 
         margin-top: 90px;
         display: flex;
@@ -230,7 +259,7 @@
     }
     &__description{
         margin-bottom: 20px;
-        font-size: 20px;
+        font-size: 2rem;
         font-family: $font_2;
         line-height: 23.44px;
         font-weight: 300;
@@ -247,8 +276,8 @@
     &__item-style{
         margin-top: 30px;
     }
-    &__product-center{
-       
+    &__productStyle img{
+        max-width:25%;
     }
     &__product-center img{
         margin: auto;
@@ -256,10 +285,10 @@
         top: 75%; 
         left: 0; 
         bottom: 0; 
-        right: 20%;
+        right: 19%;
         height: auto;
         width: 100%;
-        max-width: 320px;
+        max-width:20%;
         @include bp($point_1) {
             right: 15%;
         }
@@ -270,7 +299,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    font-size: 60px;
+    font-size: 6rem;
     font-family: $font_3;
     @include bp($point_4) {
         flex-wrap: wrap;
@@ -293,3 +322,59 @@
         padding-right: 100px;
     }
 }
+
+/* Слайды */
+.slick-slide {
+    margin: 0 26px;
+  }
+  
+  /* Родительский элемент */
+  .slick-list {
+    margin: 0 -26px;
+  }
+  .slick-arrow{
+    margin-right: 12px;
+    margin-top: 6.6rem;
+    display: flex;
+    justify-content: end;
+    &__prev{
+        margin-right: 60px;
+    }
+  }
+
+  .tabs {
+        margin-top: 4rem;
+        display: flex;
+        //   justify-content: space-between;
+        flex-wrap: wrap;
+
+        &__item{
+            margin-top: 4rem;
+            font-size: 3rem;
+            font-family: $font_3;
+            margin-right: 10rem;
+        }
+        &__card{ 
+            width: 30%;
+            margin-top: 9rem;
+        }
+        &__card-title{
+            font-family: $font_3;
+            font-size: 3rem;
+        }
+        &__card-text{
+            margin-top: 2rem;
+            font-size: 2rem;
+            font-family: $font_2;
+        }
+        &__card-img {
+            margin-top: 40px;
+        }
+        &__card-block{
+            padding: 25px 25px;
+        }
+        &__row{
+            display: flex;
+        }
+    }
+  

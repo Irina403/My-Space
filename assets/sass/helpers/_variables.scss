@@ -1,5 +1,5 @@
 // Global 
-$header: 60px;
+$header: 6rem;
 $footer: 20rem;
 
 // Mobile
@@ -11,9 +11,7 @@ $footer_mob: 10rem;
 $font_path: "../fonts/";
 $font_1: 'Roboto', sans-serif;
 $font_2: 'Robotolight', sans-serif;
-$font_3: 'AkzidenzGroteskPro-Regular', sans-serif;
-$font_4: 'AkzidenzGroteskPro-XBdCn', sans-serif;
-$font_5: 'AkzidenzGroteskPro-XBd', sans-serif;
+$font_3: 'akzidenzgroteskpro-ext', serif;
 $font_size_base: 1.8rem;
 //---------------------------------------------fonts###
 
@@ -53,9 +51,10 @@ $gl_radius:.5rem;
 //---------------------------------------------global values###
 
 //---------------------------------------------media points
+$point_0:1620px;
 $point_1: 1440px;
-$point_2: 1200px;
-$point_3: 1024px;
+$point_2: 1290px;
+$point_3: 1060px;
 $point_4: 768px;
 $point_5: 640px;
 $point_6: 480px;

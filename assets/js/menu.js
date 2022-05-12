@@ -107,6 +107,6 @@ $(function() {
 	}
 });
 
-$('.menuMobile__triger').click(function(){
+$('.menuMobile__trigger').click(function(){
 	$('.menuMobile__list').toggleClass('active');
 });

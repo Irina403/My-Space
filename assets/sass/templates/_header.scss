@@ -13,30 +13,31 @@
 	border-bottom: 1px solid #000;
 	will-change: transform;
 
-	@include bp($point_2) {
+	@include bp($point_3) {
 		height: $header_mob;
 	}
 
 	&_main{
-		@include bp($point_4) {
+		@include bp($point_3) {
 			display: none;
 		}
 	}
 }
 .menuMobile{
-	@include bp($point_4) {
+	@include bp($point_3) {
 		z-index: 99999;
 	}
 }
 .menuMobile__list{
-	display: none;
+	opacity: 0;
 }
 .menuMobile__list.active{
-	display: block;
+	opacity: 1;
+	transition: 1s;
 }
 .menuMobile{
 	&__list{
-		margin-top: 25px;
+		margin-top: 35px;
 		background-color:#fff;
 		text-align: end;
 		margin-right: 15px;
@@ -58,32 +59,38 @@
 .nav {
 	display: grid;
 	grid-template-columns: 1fr 2fr 1fr;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
 	background-color:#fff;
     &__list{
 		position: relative;
         display: flex;
 		margin-left: -100px;
 		width: 100%;
+		@include bp($point_2) {
+			margin-left: -50px;
+		 }
     }
 	&__list:after{
-		top: -20px;
-		bottom:0;
+		top: -1.8rem;
 		right: 0px;
 		position: absolute;
 		display: block;
 		content:'';
 		width: 1px;
-		height: 62px;
+		height: 6rem;
 		background-color:#000;
+		@include bp($point_2) {
+			right: 20px;
+		}
     }
     &__item{
-        font-size: 18px;
-        margin-right: 70px;
+        font-size: 1.8rem;
+        margin-right: 50px;
 		@include bp($point_1) {
-			margin-right: 40px;
+			margin-right: 30px;
+		 }
+		 @include bp($point_2) {
+			// font-size: 14px;
+			margin-right: 20px;
 		 }
        
     }
@@ -93,7 +100,6 @@
 	&__logo{
 		position: relative;
 		width: 200px;
-		// height: 0px;
 		display: flex;
 		align-items:center;
 		@include bp($point_1) {
@@ -101,14 +107,12 @@
 		 }
 	}
 	&__logo::after{
-		top: -19px;
-		bottom:0;
-		right: -20px;
+		right: 0px;
 		position: absolute;
 		display: block;
 		content:'';
 		width: 1px;
-		height: 62px;
+		height: 6rem;
 		background-color:#000;
 		// border-right: 1px solid #000;
 	}
@@ -119,13 +123,13 @@
 		justify-content: center;
 		position: absolute;
 		right: 0;
-		height: 60px;
+		height: $header;
 		background-color: #232323;
-		max-width: 362px;
-		width: 100%;
-		@include bp($point_1) {
-           width: 262px;
-        }
+		// max-width: 362px;
+		width: 20%;
+		// @include bp($point_1) {
+        //    width: 262px;
+        // }
 	}
 	&__button a{ 
 		color: #fff;
@@ -134,14 +138,30 @@
 		margin-left: -50px;
 		color: #000;
 	}
+	&__tel a{
+		@include bp($point_2) {
+			font-size: 16px;
+	 }
+	}
+
 
   }
-
+.icon-my-Space{
+	@include bp($point_2) {
+		width: 5em !important;
+	 }
+}
 .menuMobile{
 	position: relative;
 
 	&__wrapp{
 		position: absolute;
 		right: 0;
+	}
+	&__trigger{
+		display: block;
+		position: absolute;
+		top: 15px;
+		right: 15px;
 	}
 }

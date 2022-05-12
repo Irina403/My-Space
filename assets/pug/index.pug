@@ -11,7 +11,7 @@ block content_block
 	section.main.wrapp 
 		.main__block
 			.main__head Готовые решения
-			.main__text Уникальный дизайн изделий по доступной цене. <br>Готовые решения для кафе ,баров , кухонь. <br>Проектируем, производим и продаем современную мебель.
+			.main__text Уникальный дизайн изделий по доступной цене. Готовые решения для кафе ,баров , кухонь. Проектируем, производим и продаем современную мебель.
 			.main__arrow
 				a(href="#") 
 					+icon('arrow-long') 
@@ -31,7 +31,7 @@ block content_block
 					.company__col-right
 						.company__text Мы проектируем, производим и продаем мебель . <br> Являемся молодым и амбициозным коллективом, работающим на результат.
 						.companyDescription
-							.companyDescription__block
+							.companyDescription__block.slick-slider
 								.companyDescription__text 
 									p Наша основная задача - выпускать качественный, экологичный продукт с интересными дизайнерскими решениями, которые удовлетворят самого взыскательного потребителя.
 									div 
@@ -43,6 +43,23 @@ block content_block
 									<br> Также мы работаем по индивидуальным эскизам и готовы помочь воплотить любую задумку.
 									div 
 										img(src="i/about-img3.jpg", alt="")
+
+								.companyDescription__text 
+									p Наша основная задача - выпускать качественный, экологичный продукт с интересными дизайнерскими решениями, которые удовлетворят самого взыскательного потребителя.
+									div 
+										img(src="i/about-img2.jpg", alt="")
+								
+								.companyDescription__text 
+									p Имеем свою линейку продукции в стиле лофт. 
+									
+									<br> Также мы работаем по индивидуальным эскизам и готовы помочь воплотить любую задумку.
+									div 
+										img(src="i/about-img3.jpg", alt="")
+							.slick-arrow 
+								.slick-arrow__prev
+									+icon('arrow-prev-slide')
+								.slick-arrow__next
+									+icon('arrow-next-slide')
 
 					
 	section.advantages.wrapp  
@@ -83,7 +100,7 @@ block content_block
 			.titleSectionBlock__num 01
 			.titleSectionBlock__title Стул лофт
 
-		.catalog__row.wrapp 
+		.catalog__row 
 			.catalog__col 
 				.catalog__item 
 					img(src="i/chair-loft1.jpg", alt="")
@@ -100,6 +117,114 @@ block content_block
 						+icon('arrow-cicle')
 				.catalog__item-right 
 					img(src="i/chair-loft4.png", alt="")
+		
+		.catalog 
+			.catalog__title.titleSectionBlock 
+				.titleSectionBlock__num 02
+				.titleSectionBlock__title Стол лофт
+
+			.catalog__row
+				.catalog__col 
+					.catalog__item 
+						img(src="i/table-loft1.jpg", alt="")
+					.catalog__item-style 
+						img(src="i/table-loft2.jpg", alt="")
+				.catalog__col
+					.catalog__product-center 
+						img(src="i/table-loft4.png", alt="")
+					
+				.catalog__col.catalog__col-right
+					.catalog__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					.button
+						a(href="#") Заказать 
+							+icon('arrow-cicle')
+					.catalog__item-right 
+						img(src="i/table-loft3.jpg", alt="")
+		
+		.catalog 
+			.catalog__title.titleSectionBlock 
+				.titleSectionBlock__num 03
+				.titleSectionBlock__title Полки лофт
+
+			.catalog__row
+				.catalog__col 
+					.catalog__item 
+						img(src="i/shelves-loft1.jpg", alt="")
+					.catalog__item-style 
+						img(src="i/shelves-loft2.jpg", alt="")
+				.catalog__col
+					.catalog__product-center 
+						img(src="i/shelves-loft4.png", alt="")
+					
+				.catalog__col.catalog__col-right
+					.catalog__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					.button
+						a(href="#") Заказать 
+							+icon('arrow-cicle')
+					.catalog__item-right 
+						img(src="i/shelves-loft3.jpg", alt="")
+
+		.catalog 
+			.catalog__title.titleSectionBlock 
+				.titleSectionBlock__num 04
+				.titleSectionBlock__title Кровать-чердак лофт
+
+			.catalog__row
+				.catalog__col 
+					.catalog__item 
+						img(src="i/bed-loft1.jpg", alt="")
+					.catalog__item-style 
+						img(src="i/bed-loft2.jpg", alt="")
+				.catalog__col
+					.catalog__product-center.catalog__productStyle 
+						img(src="i/bed-loft3.png", alt="" )
+					
+				.catalog__col.catalog__col-right
+					.catalog__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					.button
+						a(href="#") Заказать 
+							+icon('arrow-cicle')
+					.catalog__item-right 
+						img(src="i/bed-loft3.jpg", alt="")
 							
 				
+		section.catalog.wrapp 
+			.catalog__title.titleSectionBlock 
+				.titleSectionBlock__num Вся мебель
+			
+			.tabs 
+				.tabs__item(data-tab="1") Столы
+				.tabs__item(data-tab="2") Стулья
+				.tabs__item(data-tab="3") Полки
+				.tabs__item(data-tab="4") Фонари
+				.tabs__item(data-tab="5") Тумбы
+				.tabs__item(data-tab="6") Журнальные столики
+				.tabs__item(data-tab="7") Обеденные столы
+				.tabs__item(data-tab="8") Банкетки
+				.tabs__item(data-tab="9") Прикроватные столики
+				.tabs__item(data-tab="10") Кровать-чердак
+			
+			.tabs__row
+				.tabs__card
+					.tabs__card-block 
+						.tabs__card-title Стол лофт
+						.tabs__card-text Стол из светлого дерева с металлическими ножками
+					.tabs__card-img 
+						img(src="i/catalog-img.jpg", alt="")
+				.tabs__card
+					.tabs__card-block 
+						.tabs__card-title Стол лофт
+						.tabs__card-text Стол из светлого дерева с металлическими ножками
+					.tabs__card-img 
+						img(src="i/catalog-img.jpg", alt="")
+				.tabs__card
+					.tabs__card-block 
+						.tabs__card-title Стол лофт
+						.tabs__card-text Стол из светлого дерева с металлическими ножками
+					.tabs__card-img 
+						img(src="i/catalog-img.jpg", alt="")
+
+				
+				
+
 

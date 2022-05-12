@@ -248,23 +248,12 @@
 // btn
 
 @mixin btn {
-	position: relative;
-	display: inline-flex;
-	p {
-		@include flex-center;
-		min-width: 26rem;
-		min-height: 6rem;
-		border: .2rem solid $green;
-		font-family: $font_2;
-		text-transform: uppercase;
-		color: $green;
-		font-size: 1.6rem;
-		cursor: pointer;
-		transition: all .3s ease;
-		line-height: 2.2rem;
-		&:hover {
-			background-color: $green;
-			color: $white;
-		}
+	a {
+		font-size: 3.5rem;
+		line-height: 45px;
+		font-family: $font_3;
+		font-weight: 400;
+		color: $black;
+		display: flex;
 	}
 }

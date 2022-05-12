@@ -100,7 +100,38 @@ console.info('%c%s', styles, message);
 
 
 
-
+$('.slick-slider').slick({
+	infinite: true,
+	slidesToShow: 2,
+	slidesToScroll: 1,
+	prevArrow: $('.slick-arrow__prev'),
+	nextArrow: $('.slick-arrow__next'),
+	responsive: [
+		{
+		  breakpoint: 1024,
+		  settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: true,
+			dots: true
+		  }
+		},
+		{
+		  breakpoint: 600,
+		  settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1
+		  }
+		},
+		{
+		  breakpoint: 480,
+		  settings: {
+			slidesToShow: 1,
+			slidesToScroll: 1
+		  }
+		}
+	  ]
+	});
 
 
 
