@@ -192,37 +192,59 @@ block content_block
 			.catalog__title.titleSectionBlock 
 				.titleSectionBlock__num Вся мебель
 			
-			.tabs 
-				.tabs__item(data-tab="1") Столы
-				.tabs__item(data-tab="2") Стулья
-				.tabs__item(data-tab="3") Полки
-				.tabs__item(data-tab="4") Фонари
-				.tabs__item(data-tab="5") Тумбы
-				.tabs__item(data-tab="6") Журнальные столики
-				.tabs__item(data-tab="7") Обеденные столы
-				.tabs__item(data-tab="8") Банкетки
-				.tabs__item(data-tab="9") Прикроватные столики
-				.tabs__item(data-tab="10") Кровать-чердак
+			ul.tabs 
+				li.tabs__item.js-tab-trigger.active(data-tab="1") Столы
+				li.tabs__item.js-tab-trigger(data-tab="2") Стулья
+				li.tabs__item.js-tab-trigger(data-tab="3") Полки
+				li.tabs__item.js-tab-trigger(data-tab="4") Фонари
+				li.tabs__item.js-tab-trigger(data-tab="5") Тумбы
+				li.tabs__item.js-tab-trigger(data-tab="6") Журнальные столики
+				li.tabs__item.js-tab-trigger(data-tab="7") Обеденные столы
+				li.tabs__item.js-tab-trigger(data-tab="8") Банкетки
+				li.tabs__item.js-tab-trigger(data-tab="9") Прикроватные столики
+				li.tabs__item.js-tab-trigger(data-tab="10") Кровать-чердак
 			
 			.tabs__row
-				.tabs__card
-					.tabs__card-block 
-						.tabs__card-title Стол лофт
-						.tabs__card-text Стол из светлого дерева с металлическими ножками
-					.tabs__card-img 
-						img(src="i/catalog-img.jpg", alt="")
-				.tabs__card
-					.tabs__card-block 
-						.tabs__card-title Стол лофт
-						.tabs__card-text Стол из светлого дерева с металлическими ножками
-					.tabs__card-img 
-						img(src="i/catalog-img.jpg", alt="")
-				.tabs__card
-					.tabs__card-block 
-						.tabs__card-title Стол лофт
-						.tabs__card-text Стол из светлого дерева с металлическими ножками
-					.tabs__card-img 
-						img(src="i/catalog-img.jpg", alt="")
+				.tabs__content.js-tab-content.active(data-tab="1")
+					.tabs__card
+						.tabs__card-block 
+							.tabs__card-title Стол лофт
+							.tabs__card-text Стол из светлого дерева с металлическими ножками
+						.tabs__card-img 
+							img(src="i/catalog-img.jpg", alt="")
+					.tabs__card
+						.tabs__card-block 
+							.tabs__card-title Стол лофт
+							.tabs__card-text Стол из светлого дерева с металлическими ножками
+						.tabs__card-img 
+							img(src="i/catalog-img.jpg", alt="")
+					.tabs__card
+						.tabs__card-block 
+							.tabs__card-title Стол лофт
+							.tabs__card-text Стол из светлого дерева с металлическими ножками
+						.tabs__card-img 
+							img(src="i/catalog-img.jpg", alt="")
+			
+			.tabs__row
+				.tabs__content.js-tab-content(data-tab="2")
+					.tabs__card
+						.tabs__card-block 
+							.tabs__card-title Стулья лофт
+							.tabs__card-text Стол из светлого дерева с металлическими ножками
+						.tabs__card-img 
+							img(src="i/catalog-img.jpg", alt="")
+					.tabs__card
+						.tabs__card-block 
+							.tabs__card-title Стулья лофт
+							.tabs__card-text Стол из светлого дерева с металлическими ножками
+						.tabs__card-img 
+							img(src="i/catalog-img.jpg", alt="")
+					.tabs__card
+						.tabs__card-block 
+							.tabs__card-title Стулья лофт
+							.tabs__card-text Стол из светлого дерева с металлическими ножками
+						.tabs__card-img 
+							img(src="i/catalog-img.jpg", alt="")
 
 				
 				

@@ -61,13 +61,54 @@
       </div>
       <footer class="footer"> 
         <div class="section_in"> 
-          <div class="footer_main"> 
-            <ul class="footer_logo--list"> 
-              <li> <a href="#"><img src="i/vector/logo.svg" alt=""></a></li>
-              <li> <a href="#"><img src="i/vector/brand.svg" alt=""></a></li>
-            </ul>
-            <div class="footer_txt"> 
-              <p>© 2022 МК-Элит </p>
+          <div class="footer__row"> 
+            <div class="footer__col"> 
+              <div class="footer__left footerLeftCol"> 
+                <div class="footerLeftCol__title">
+                  <div class="footerTitle footerTitle-left">Оставить заявку</div>
+                </div>
+                <form class="contactForm" action="#">
+                  <input class="contactForm__input" type="text" placeholder="Ваше имя">
+                  <input class="contactForm__input" type="text" placeholder="Ваш телефон">
+                  <div class="contactForm__check">
+                    <label class="contactForm__checkbox-inline"></label>
+                    <input class="contactForm__form-control" required type="checkbox" name="input-group-radio"><a class="contactForm__link" href="#">Соглашаюсь с политикой конфиденциальности</a>
+                  </div>
+                  <div class="button"><a href="#">Отправить
+                      <svg class="icon icon-arrow-cicle ">
+                        <use xlink:href="i/sprite/sprite.svg#arrow-cicle"></use>
+                      </svg></a></div>
+                </form>
+              </div>
+            </div>
+            <div class="footer__col">
+              <div class="footer__right footerLeftCol"> 
+                <div class="footerRight__title">
+                  <div class="footerTitle">Контакты</div>
+                  <div class="footer__block blockContacts"> 
+                    <div class="blockContacts__left blockLeft"> <a class="blockLeft__contact" href="tel:+79009999999">+7 900 999 99 99</a><a class="blockLeft__contact" href="#">mail@mail.ru</a>
+                      <div class="blockLeft__contact">г ____,ул _____________</div>
+                      <div class="blockLeft__wrapp">
+                        <div class="blockLeft__network"><a href="#"> 
+                            <svg class="icon icon-telega ">
+                              <use xlink:href="i/sprite/sprite.svg#telega"></use>
+                            </svg></a></div>
+                        <div class="blockLeft__network"><a href="#"> 
+                            <svg class="icon icon-whats ">
+                              <use xlink:href="i/sprite/sprite.svg#whats"></use>
+                            </svg></a></div>
+                      </div>
+                    </div>
+                    <div class="blockContacts__right blockRight"> 
+                      <div class="blockRight__text">© My Space, 2022</div><a class="blockRight__text" href="#">Политика конфиденциальности</a>
+                      <div class="blockRight__company"><a class="blockRight__text" href="#">Разработано arkada-web.ru
+                          <svg class="icon icon-logo ">
+                            <use xlink:href="i/sprite/sprite.svg#logo"></use>
+                          </svg></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
