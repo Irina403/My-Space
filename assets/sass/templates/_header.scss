@@ -1,4 +1,7 @@
 //------------------------------------------------------------layout
+.base{
+	padding: 0;
+}
 .header {
 	position: fixed;
 	top: 0;
@@ -24,6 +27,7 @@
 	}
 }
 .menuMobile{
+	display: flex;
 	@include bp($point_3) {
 		z-index: 99999;
 	}
@@ -34,15 +38,38 @@
 .menuMobile__list.active{
 	opacity: 1;
 	transition: 1s;
+	background-color:$black;
 }
 .menuMobile{
 	&__list{
-		margin-top: 35px;
-		background-color:#fff;
-		text-align: end;
-		margin-right: 15px;
+		margin-top: 10%;
+		padding: 10px;
+		margin-top: 44px;
+		background-color:$black;
+		text-align: center;
+	}
+	&__list li{
+		padding-bottom: 10px;
+	}
+	&__list li a{
+		color:#fff;
+	}
+	&__wrapp{
+		width: 100%;
 	}
 }
+.nav__logo-mobile::after{
+	height: 4.5rem !important;
+
+}
+.nav__logo-mobile{
+	padding: 10px;
+}
+.nav__tel-mobile{
+	padding: 10px;
+	margin-left: 10% !important;
+}
+
 .wrapp {
     width: 100%;
     max-width: 1720px;
@@ -84,12 +111,12 @@
     }
     &__item{
         font-size: 1.8rem;
-        margin-right: 50px;
+        margin-right: 6.6rem;
 		@include bp($point_1) {
 			margin-right: 30px;
 		 }
 		 @include bp($point_2) {
-			// font-size: 14px;
+			font-size: 14px;
 			margin-right: 20px;
 		 }
        
@@ -114,7 +141,6 @@
 		width: 1px;
 		height: 6rem;
 		background-color:#000;
-		// border-right: 1px solid #000;
 	}
 	&__button{
 		top: 0;
