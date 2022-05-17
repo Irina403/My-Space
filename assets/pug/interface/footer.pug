@@ -9,9 +9,10 @@ footer.footer
 					input(type="text" placeholder="Ваше имя").contactForm__input
 					input(type="text" placeholder="Ваш телефон").contactForm__input
 					.contactForm__check
-						label.contactForm__checkbox-inline
-						input(required type="checkbox" name="input-group-radio").contactForm__form-control 
-						a(href="#").contactForm__link Соглашаюсь с политикой конфиденциальности
+						label.checkbox.style-a
+							input(required type="checkbox" name="input-group-radio").contactForm__form-control 
+							.checkbox__checkmark
+							a(href="#").contactForm__link Соглашаюсь с политикой конфиденциальности
 					.button
 						a(href="#") Отправить
 							+icon('arrow-cicle')
@@ -42,4 +43,24 @@ footer.footer
 							a(href="#").blockRight__text Разработано arkada-web.ru
 								+icon('logo')
 	
-							
+
+.popup-fade
+	.popup
+		.popup__container
+			.popup-close
+				a(href="#") 
+					+icon('close-icon')
+			.popup__title Оставить заявку
+			.footer__contactForm.popupForm
+				input.popupForm__inputStyle(type="text" placeholder="Ваше имя")
+				input.popupForm__inputStyle(type="text" placeholder="Ваш телефон")
+				.contactForm__check.contactForm__check-popup
+					label.checkbox.style-a
+						input(required type="checkbox" name="input-group-radio").contactForm__form-control 
+						.checkbox__checkmark
+						a(href="#").contactForm__link Соглашаюсь с политикой конфиденциальности
+					
+					
+				.button.button-popup
+					a(href="#") Отправить
+						+icon('arrow-cicle')

@@ -90,7 +90,7 @@
     &__list{
 		position: relative;
         display: flex;
-		margin-left: -100px;
+		margin-left: -60px;
 		width: 100%;
 		@include bp($point_2) {
 			margin-left: -50px;
@@ -98,7 +98,7 @@
     }
 	&__list:after{
 		top: -1.8rem;
-		right: 0px;
+		right: 45px;
 		position: absolute;
 		display: block;
 		content:'';

@@ -147,7 +147,7 @@ $('.js-tab-trigger').click(function(){
 
 var items = $(".list-wrapper .list-item");
     var numItems = items.length;
-    var perPage = 4;
+    var perPage = 6;
 
     items.slice(perPage).hide();
 
@@ -163,6 +163,32 @@ var items = $(".list-wrapper .list-item");
         }
     });
 
+
+	$('.popup-open').click(function() {
+		$('.popup-fade').fadeIn();
+		return false;
+	  });	
+	  
+	  $('.popup-close').click(function() {
+		$(this).parents('.popup-fade').fadeOut();
+		return false;
+	  });		
+	 
+	  $(document).keydown(function(e) {
+		if (e.keyCode === 27) {
+		  e.stopPropagation();
+		  $('.popup-fade').fadeOut();
+		}
+	  });
+	  
+	  $('.popup-fade').click(function(e) {
+		if ($(e.target).closest('.popup').length == 0) {
+		  $(this).fadeOut();					
+		}
+	});
+	$('.professionals__btn').click(function(){
+	  console.log('CLICK');
+	});
 
 
 

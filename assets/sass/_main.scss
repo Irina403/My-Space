@@ -7,6 +7,7 @@
         line-height: 77px;
         @include bp($point_1) {
             line-height: 55px;
+            font-size: 4.5rem;
         }
         @include bp($point_2) {
             font-size: 55px;
@@ -36,6 +37,9 @@
         padding-left: 86px;
         padding-right: 30px;
         width: 42%;
+        @include bp($point_1) {
+            width: 45%;
+        }
         @include bp($point_2) {
             font-size: 15px;
         }
@@ -308,16 +312,12 @@
         top: 77%; 
         left: 0; 
         bottom: 0; 
-        right: 24%;
-        // height: auto;
-        // width: 100%;
+        right: 15%;
         @include bp($point_1) {
-            right: 8%;
+            right: 12%;
+            width: 25%;
         }
         @include bp($point_2) {
-        //     right: 73%;
-        //     top: 90%;
-        // }
         display: none;
         }
     }
@@ -325,10 +325,16 @@
 .catalog__product-center-style img{
     top:60%;
     right: 20%;
+    @include bp($point_1) {
+        right: 15%;
+    }
 }
 .catalog__product-center-style2 img{
     top:60%;
     right: 12%;
+    @include bp($point_1) {
+        right: 10%;
+    }
 }
 
 .titleSectionBlock{
@@ -413,7 +419,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height:49rem;
+        // height:49rem;
         @include bp($point_3) {
             width: 45%;
             margin-top: 3rem;
@@ -466,8 +472,8 @@
 .footerTitle{
     font-size: 6rem;
     font-family: $font_3;
-    @include bp($point_2) {
-        font-size: 3.6rem;
+    @include bp($point_1) {
+        font-size: 4.2rem;
     }
 }
 .footerTitle-left{
@@ -492,7 +498,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 50%;
+        // width: 50%;
         @include bp($point_2) {
             width: 100%;
         }
@@ -528,12 +534,14 @@
             width: 100%;
         }
     }
-    &__check{
-        display: flex;
-    }
+
     &__link {
         font-size: 2rem;
     }
+}
+.checkbox.style-a{
+    display: flex;
+    align-items:center;
 }
 .blockLeft{
     padding-right: 20rem;
@@ -611,64 +619,117 @@
     width: 1em;
 }
 .footerLeftCol {
-    width: 42%;
+    width: 43%;
 }
 .footerRightCol{
-    width: 58%;
+    width: 57%;
+}
+.light-theme.simple-pagination{
+    margin-top: 100px;
+}
+.disabled{
+    display: none;
+}
+.current.prev{
+    display: none;
+}
+.page-link.prev{
+    display: none;
+}
+.current.next{
+    display: none;
+}
+.page-link.next{
+    display: none;
+}
+// ul li{
+//     width: 46px;
+//     height: 46px;
+// }
+li span{
+    padding: 10px !important;
+    font-size: 3rem;
+    font-family: $font_3;
+    color:#000 !important;
+    background-color:#fff !important;
+    border:1px solid #000 !important;
 }
 
-.list-wrapper {
-	padding: 15px;
-
+.light-theme .current{
+    font-size: 3rem;
+    font-family: $font_3;
+}
+li a.page-link{
+    padding: 10px !important;
+    font-size: 3rem;
+    font-family: $font_3;
+    color:#000;
+}
+.light-theme a{
+    background:#fff !important;
+    box-shadow:none !important;
+    border:none !important;
 }
 
-.list-item {
-	border: 1px solid #EEE;
-	background: #FFF;
-	margin-bottom: 10px;
-	padding: 10px;
-	box-shadow: 0px 0px 10px 0px #EEE;
+.contactForm__form-control{
+    width: 28px;
+    height: 28px;
 }
+.checkbox.style-a {
+    height: 30px;
+    display: flex;
+    position: relative;
+    padding-left: 40px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .checkbox.style-a input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  .checkbox.style-a input:checked ~ .checkbox__checkmark {
+    background-color: #fff;
+  }
+  .checkbox.style-a input:checked ~ .checkbox__checkmark:after {
+    opacity: 1;
+  }
+  .checkbox.style-a:hover input ~ .checkbox__checkmark {
+    background-color: #fff;
+  }
+  .checkbox.style-a:hover input:checked ~ .checkbox__checkmark {
+    background-color: #fff;
+  }
+  .checkbox.style-a .checkbox__checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 28px;
+    width: 28px;
+    background-color: #fff;
+    border:1px solid #000;
+    transition: background-color 0.25s ease;
+  }
+  .checkbox.style-a .checkbox__checkmark:after {
+    content: "";
+    position: absolute;
+    left: 8px;
 
-.list-item h4 {
-	color: #FF7182;
-	font-size: 18px;
-	margin: 0 0 5px;	
-}
-
-.list-item p {
-	margin: 0;
-}
-
-.simple-pagination ul {
-	margin: 0 0 20px;
-	padding: 0;
-	list-style: none;
-	text-align: center;
-}
-
-.simple-pagination li {
-	display: inline-block;
-	margin-right: 5px;
-}
-
-.simple-pagination li a,
-.simple-pagination li span {
-	color: #666;
-	padding: 5px 10px;
-	text-decoration: none;
-	border: 1px solid #EEE;
-	background-color: #FFF;
-	box-shadow: 0px 0px 10px 0px #EEE;
-}
-
-.simple-pagination .current {
-	color: #FFF;
-	background-color: #FF7182;
-	border-color: #FF7182;
-}
-
-.simple-pagination .prev.current,
-.simple-pagination .next.current {
-	background: #e04e60;
-}
+    width: 11px;
+    height: 21px;
+    border: solid #333;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .checkbox.style-a .checkbox__body {
+    color: #333;
+    line-height: 1.4;
+    font-size: 16px;
+  }
