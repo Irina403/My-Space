@@ -33,9 +33,9 @@
         font-family: $font_2;
         width: 55rem;
         line-height: 23.44px;
-        padding-left: 10px;
+        padding-left: 86px;
         padding-right: 30px;
-        width: 35%;
+        width: 42%;
         @include bp($point_2) {
             font-size: 15px;
         }
@@ -249,7 +249,7 @@
     }
     &__row{
         width: 100%;
-        max-width: 1720px;
+        max-width: 1920px;
         padding-left: 100px;
         // padding-right: 100px;
         margin-left: auto;
@@ -265,7 +265,7 @@
          }
     }
     &__col-right{
-        width: 55%;
+        width: 50%;
         @include bp($point_1) {
             width: 50%;
         }
@@ -285,6 +285,7 @@
         font-family: $font_2;
         line-height: 23.44px;
         font-weight: 300;
+        width: 93%;
     }
     &__item-right{
         margin-top: 45px;
@@ -304,13 +305,12 @@
     &__product-center img{
         margin: auto;
         position: absolute;
-        top: 75%; 
+        top: 77%; 
         left: 0; 
         bottom: 0; 
-        right: 19%;
-        height: auto;
-        width: 100%;
-        max-width:20%;
+        right: 24%;
+        // height: auto;
+        // width: 100%;
         @include bp($point_1) {
             right: 8%;
         }
@@ -322,6 +322,14 @@
         }
     }
     }
+.catalog__product-center-style img{
+    top:60%;
+    right: 20%;
+}
+.catalog__product-center-style2 img{
+    top:60%;
+    right: 12%;
+}
 
 .titleSectionBlock{
     position: relative;
@@ -399,7 +407,7 @@
     }
 
     &__card{ 
-        width: 30%;
+        width: 32.5%;
         margin-top: 9rem;
         border:1px solid #000;
         display: flex;
@@ -601,5 +609,66 @@
     fill: none !important;
     stroke: red;
     width: 1em;
- 
+}
+.footerLeftCol {
+    width: 42%;
+}
+.footerRightCol{
+    width: 58%;
+}
+
+.list-wrapper {
+	padding: 15px;
+
+}
+
+.list-item {
+	border: 1px solid #EEE;
+	background: #FFF;
+	margin-bottom: 10px;
+	padding: 10px;
+	box-shadow: 0px 0px 10px 0px #EEE;
+}
+
+.list-item h4 {
+	color: #FF7182;
+	font-size: 18px;
+	margin: 0 0 5px;	
+}
+
+.list-item p {
+	margin: 0;
+}
+
+.simple-pagination ul {
+	margin: 0 0 20px;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.simple-pagination li {
+	display: inline-block;
+	margin-right: 5px;
+}
+
+.simple-pagination li a,
+.simple-pagination li span {
+	color: #666;
+	padding: 5px 10px;
+	text-decoration: none;
+	border: 1px solid #EEE;
+	background-color: #FFF;
+	box-shadow: 0px 0px 10px 0px #EEE;
+}
+
+.simple-pagination .current {
+	color: #FFF;
+	background-color: #FF7182;
+	border-color: #FF7182;
+}
+
+.simple-pagination .prev.current,
+.simple-pagination .next.current {
+	background: #e04e60;
 }
