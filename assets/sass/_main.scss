@@ -51,6 +51,9 @@
         }
         
     }
+    &__arrow{
+        width: 100%;
+    }
     &__arrow a{
         display: flex;
         height: 100%;
@@ -185,6 +188,9 @@
         @include bp($point_1) {
            margin-top: -20px;
         } 
+        @include bp($point_4) {
+            margin-top: -50px;
+         } 
     }
     &__col {
         width: 32%; 
@@ -229,6 +235,9 @@
         @include bp($point_2) {
             font-size: 2.5rem;
         }
+        @include bp($point_4) {
+            font-size: 2rem;
+        }
     }
     &__text{
         margin-top: 20px;
@@ -239,6 +248,9 @@
         width: 300;
         @include bp($point_2) {
             font-size:1.8rem;
+        }
+        @include bp($point_4) {
+            font-size:1.4rem;
         }
     }
     &__textBlock{
