@@ -1,5 +1,403 @@
 !function(t){"use strict";function e(){var e=this;e.reads=[],e.writes=[],e.raf=u.bind(t)}function n(t){t.scheduled||(t.scheduled=!0,t.raf(i.bind(null,t)))}function i(t){var e,i=t.writes,o=t.reads;try{r(o),r(i)}catch(s){e=s}if(t.scheduled=!1,(o.length||i.length)&&n(t),e){if(!t["catch"])throw e;t["catch"](e)}}function r(t){for(var e;e=t.shift();)e()}function o(t,e){var n=t.indexOf(e);return!!~n&&!!t.splice(n,1)}function s(t,e){for(var n in e)e.hasOwnProperty(n)&&(t[n]=e[n])}var u=t.requestAnimationFrame||t.webkitRequestAnimationFrame||t.mozRequestAnimationFrame||t.msRequestAnimationFrame||function(t){return setTimeout(t,16)};e.prototype={constructor:e,measure:function(t,e){var i=e?t.bind(e):t;return this.reads.push(i),n(this),i},mutate:function(t,e){var i=e?t.bind(e):t;return this.writes.push(i),n(this),i},clear:function(t){return o(this.reads,t)||o(this.writes,t)},extend:function(t){if("object"!=typeof t)throw new Error("expected object");var e=Object.create(this);return s(e,t),e.fastdom=this,e.initialize&&e.initialize(),e},"catch":null};var exports=t.fastdom=t.fastdom||new e;"f"==(typeof define)[0]?define(function(){return exports}):"o"==(typeof module)[0]&&(module.exports=exports)}("undefined"!=typeof window?window:this);
-;!function(a){var b=/iPhone/i,c=/iPod/i,d=/iPad/i,e=/(?=.*\bAndroid\b)(?=.*\bMobile\b)/i,f=/Android/i,g=/(?=.*\bAndroid\b)(?=.*\bSD4930UR\b)/i,h=/(?=.*\bAndroid\b)(?=.*\b(?:KFOT|KFTT|KFJWI|KFJWA|KFSOWI|KFTHWI|KFTHWA|KFAPWI|KFAPWA|KFARWI|KFASWI|KFSAWI|KFSAWA)\b)/i,i=/Windows Phone/i,j=/(?=.*\bWindows\b)(?=.*\bARM\b)/i,k=/BlackBerry/i,l=/BB10/i,m=/Opera Mini/i,n=/(CriOS|Chrome)(?=.*\bMobile\b)/i,o=/(?=.*\bFirefox\b)(?=.*\bMobile\b)/i,p=new RegExp("(?:Nexus 7|BNTV250|Kindle Fire|Silk|GT-P1000)","i"),q=function(a,b){return a.test(b)},r=function(a){var r=a||navigator.userAgent,s=r.split("[FBAN");if("undefined"!=typeof s[1]&&(r=s[0]),s=r.split("Twitter"),"undefined"!=typeof s[1]&&(r=s[0]),this.apple={phone:q(b,r),ipod:q(c,r),tablet:!q(b,r)&&q(d,r),device:q(b,r)||q(c,r)||q(d,r)},this.amazon={phone:q(g,r),tablet:!q(g,r)&&q(h,r),device:q(g,r)||q(h,r)},this.android={phone:q(g,r)||q(e,r),tablet:!q(g,r)&&!q(e,r)&&(q(h,r)||q(f,r)),device:q(g,r)||q(h,r)||q(e,r)||q(f,r)},this.windows={phone:q(i,r),tablet:q(j,r),device:q(i,r)||q(j,r)},this.other={blackberry:q(k,r),blackberry10:q(l,r),opera:q(m,r),firefox:q(o,r),chrome:q(n,r),device:q(k,r)||q(l,r)||q(m,r)||q(o,r)||q(n,r)},this.seven_inch=q(p,r),this.any=this.apple.device||this.android.device||this.windows.device||this.other.device||this.seven_inch,this.phone=this.apple.phone||this.android.phone||this.windows.phone,this.tablet=this.apple.tablet||this.android.tablet||this.windows.tablet,"undefined"==typeof window)return this},s=function(){var a=new r;return a.Class=r,a};"undefined"!=typeof module&&module.exports&&"undefined"==typeof window?module.exports=r:"undefined"!=typeof module&&module.exports&&"undefined"!=typeof window?module.exports=s():"function"==typeof define&&define.amd?define("isMobile",[],a.isMobile=s()):a.isMobile=s()}(this);;/*! modernizr 3.2.0 (Custom Build) | MIT *
+;!function(a){var b=/iPhone/i,c=/iPod/i,d=/iPad/i,e=/(?=.*\bAndroid\b)(?=.*\bMobile\b)/i,f=/Android/i,g=/(?=.*\bAndroid\b)(?=.*\bSD4930UR\b)/i,h=/(?=.*\bAndroid\b)(?=.*\b(?:KFOT|KFTT|KFJWI|KFJWA|KFSOWI|KFTHWI|KFTHWA|KFAPWI|KFAPWA|KFARWI|KFASWI|KFSAWI|KFSAWA)\b)/i,i=/Windows Phone/i,j=/(?=.*\bWindows\b)(?=.*\bARM\b)/i,k=/BlackBerry/i,l=/BB10/i,m=/Opera Mini/i,n=/(CriOS|Chrome)(?=.*\bMobile\b)/i,o=/(?=.*\bFirefox\b)(?=.*\bMobile\b)/i,p=new RegExp("(?:Nexus 7|BNTV250|Kindle Fire|Silk|GT-P1000)","i"),q=function(a,b){return a.test(b)},r=function(a){var r=a||navigator.userAgent,s=r.split("[FBAN");if("undefined"!=typeof s[1]&&(r=s[0]),s=r.split("Twitter"),"undefined"!=typeof s[1]&&(r=s[0]),this.apple={phone:q(b,r),ipod:q(c,r),tablet:!q(b,r)&&q(d,r),device:q(b,r)||q(c,r)||q(d,r)},this.amazon={phone:q(g,r),tablet:!q(g,r)&&q(h,r),device:q(g,r)||q(h,r)},this.android={phone:q(g,r)||q(e,r),tablet:!q(g,r)&&!q(e,r)&&(q(h,r)||q(f,r)),device:q(g,r)||q(h,r)||q(e,r)||q(f,r)},this.windows={phone:q(i,r),tablet:q(j,r),device:q(i,r)||q(j,r)},this.other={blackberry:q(k,r),blackberry10:q(l,r),opera:q(m,r),firefox:q(o,r),chrome:q(n,r),device:q(k,r)||q(l,r)||q(m,r)||q(o,r)||q(n,r)},this.seven_inch=q(p,r),this.any=this.apple.device||this.android.device||this.windows.device||this.other.device||this.seven_inch,this.phone=this.apple.phone||this.android.phone||this.windows.phone,this.tablet=this.apple.tablet||this.android.tablet||this.windows.tablet,"undefined"==typeof window)return this},s=function(){var a=new r;return a.Class=r,a};"undefined"!=typeof module&&module.exports&&"undefined"==typeof window?module.exports=r:"undefined"!=typeof module&&module.exports&&"undefined"!=typeof window?module.exports=s():"function"==typeof define&&define.amd?define("isMobile",[],a.isMobile=s()):a.isMobile=s()}(this);;/**
+* simplePagination.js v1.6
+* A simple jQuery pagination plugin.
+* http://flaviusmatis.github.com/simplePagination.js/
+*
+* Copyright 2012, Flavius Matis
+* Released under the MIT license.
+* http://flaviusmatis.github.com/license.html
+*/
+
+(function($){
+
+	var methods = {
+		init: function(options) {
+			var o = $.extend({
+				items: 1,
+				itemsOnPage: 1,
+				pages: 0,
+				displayedPages: 5,
+				edges: 2,
+				currentPage: 0,
+				useAnchors: true,
+				hrefTextPrefix: '#page-',
+				hrefTextSuffix: '',
+				prevText: 'Prev',
+				nextText: 'Next',
+				ellipseText: '&hellip;',
+				ellipsePageSet: true,
+				cssStyle: 'light-theme',
+				listStyle: '',
+				labelMap: [],
+				selectOnClick: true,
+				nextAtFront: false,
+				invertPageOrder: false,
+				useStartEdge : true,
+				useEndEdge : true,
+				onPageClick: function(pageNumber, event) {
+					// Callback triggered when a page is clicked
+					// Page number is given as an optional parameter
+				},
+				onInit: function() {
+					// Callback triggered immediately after initialization
+				}
+			}, options || {});
+
+			var self = this;
+
+			o.pages = o.pages ? o.pages : Math.ceil(o.items / o.itemsOnPage) ? Math.ceil(o.items / o.itemsOnPage) : 1;
+			if (o.currentPage)
+				o.currentPage = o.currentPage - 1;
+			else
+				o.currentPage = !o.invertPageOrder ? 0 : o.pages - 1;
+			o.halfDisplayed = o.displayedPages / 2;
+
+			this.each(function() {
+				self.addClass(o.cssStyle + ' simple-pagination').data('pagination', o);
+				methods._draw.call(self);
+			});
+
+			o.onInit();
+
+			return this;
+		},
+
+		selectPage: function(page) {
+			methods._selectPage.call(this, page - 1);
+			return this;
+		},
+
+		prevPage: function() {
+			var o = this.data('pagination');
+			if (!o.invertPageOrder) {
+				if (o.currentPage > 0) {
+					methods._selectPage.call(this, o.currentPage - 1);
+				}
+			} else {
+				if (o.currentPage < o.pages - 1) {
+					methods._selectPage.call(this, o.currentPage + 1);
+				}
+			}
+			return this;
+		},
+
+		nextPage: function() {
+			var o = this.data('pagination');
+			if (!o.invertPageOrder) {
+				if (o.currentPage < o.pages - 1) {
+					methods._selectPage.call(this, o.currentPage + 1);
+				}
+			} else {
+				if (o.currentPage > 0) {
+					methods._selectPage.call(this, o.currentPage - 1);
+				}
+			}
+			return this;
+		},
+
+		getPagesCount: function() {
+			return this.data('pagination').pages;
+		},
+
+		setPagesCount: function(count) {
+			this.data('pagination').pages = count;
+		},
+
+		getCurrentPage: function () {
+			return this.data('pagination').currentPage + 1;
+		},
+
+		destroy: function(){
+			this.empty();
+			return this;
+		},
+
+		drawPage: function (page) {
+			var o = this.data('pagination');
+			o.currentPage = page - 1;
+			this.data('pagination', o);
+			methods._draw.call(this);
+			return this;
+		},
+
+		redraw: function(){
+			methods._draw.call(this);
+			return this;
+		},
+
+		disable: function(){
+			var o = this.data('pagination');
+			o.disabled = true;
+			this.data('pagination', o);
+			methods._draw.call(this);
+			return this;
+		},
+
+		enable: function(){
+			var o = this.data('pagination');
+			o.disabled = false;
+			this.data('pagination', o);
+			methods._draw.call(this);
+			return this;
+		},
+
+		updateItems: function (newItems) {
+			var o = this.data('pagination');
+			o.items = newItems;
+			o.pages = methods._getPages(o);
+			this.data('pagination', o);
+			methods._draw.call(this);
+		},
+
+		updateItemsOnPage: function (itemsOnPage) {
+			var o = this.data('pagination');
+			o.itemsOnPage = itemsOnPage;
+			o.pages = methods._getPages(o);
+			this.data('pagination', o);
+			methods._selectPage.call(this, 0);
+			return this;
+		},
+
+		getItemsOnPage: function() {
+			return this.data('pagination').itemsOnPage;
+		},
+
+		_draw: function() {
+			var	o = this.data('pagination'),
+				interval = methods._getInterval(o),
+				i,
+				tagName;
+
+			methods.destroy.call(this);
+
+			tagName = (typeof this.prop === 'function') ? this.prop('tagName') : this.attr('tagName');
+
+			var $panel = tagName === 'UL' ? this : $('<ul' + (o.listStyle ? ' class="' + o.listStyle + '"' : '') + '></ul>').appendTo(this);
+
+			// Generate Prev link
+			if (o.prevText) {
+				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage - 1 : o.currentPage + 1, {text: o.prevText, classes: 'prev'});
+			}
+
+			// Generate Next link (if option set for at front)
+			if (o.nextText && o.nextAtFront) {
+				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next'});
+			}
+
+			// Generate start edges
+			if (!o.invertPageOrder) {
+				if (interval.start > 0 && o.edges > 0) {
+					if(o.useStartEdge) {
+						var end = Math.min(o.edges, interval.start);
+						for (i = 0; i < end; i++) {
+							methods._appendItem.call(this, i);
+						}
+					}
+					if (o.edges < interval.start && (interval.start - o.edges != 1)) {
+						$panel.append('<li class="disabled"><span class="ellipse">' + o.ellipseText + '</span></li>');
+					} else if (interval.start - o.edges == 1) {
+						methods._appendItem.call(this, o.edges);
+					}
+				}
+			} else {
+				if (interval.end < o.pages && o.edges > 0) {
+					if(o.useStartEdge) {
+						var begin = Math.max(o.pages - o.edges, interval.end);
+						for (i = o.pages - 1; i >= begin; i--) {
+							methods._appendItem.call(this, i);
+						}
+					}
+
+					if (o.pages - o.edges > interval.end && (o.pages - o.edges - interval.end != 1)) {
+						$panel.append('<li class="disabled"><span class="ellipse">' + o.ellipseText + '</span></li>');
+					} else if (o.pages - o.edges - interval.end == 1) {
+						methods._appendItem.call(this, interval.end);
+					}
+				}
+			}
+
+			// Generate interval links
+			if (!o.invertPageOrder) {
+				for (i = interval.start; i < interval.end; i++) {
+					methods._appendItem.call(this, i);
+				}
+			} else {
+				for (i = interval.end - 1; i >= interval.start; i--) {
+					methods._appendItem.call(this, i);
+				}
+			}
+
+			// Generate end edges
+			if (!o.invertPageOrder) {
+				if (interval.end < o.pages && o.edges > 0) {
+					if (o.pages - o.edges > interval.end && (o.pages - o.edges - interval.end != 1)) {
+						$panel.append('<li class="disabled"><span class="ellipse">' + o.ellipseText + '</span></li>');
+					} else if (o.pages - o.edges - interval.end == 1) {
+						methods._appendItem.call(this, interval.end);
+					}
+					if(o.useEndEdge) {
+						var begin = Math.max(o.pages - o.edges, interval.end);
+						for (i = begin; i < o.pages; i++) {
+							methods._appendItem.call(this, i);
+						}
+					}
+				}
+			} else {
+				if (interval.start > 0 && o.edges > 0) {
+					if (o.edges < interval.start && (interval.start - o.edges != 1)) {
+						$panel.append('<li class="disabled"><span class="ellipse">' + o.ellipseText + '</span></li>');
+					} else if (interval.start - o.edges == 1) {
+						methods._appendItem.call(this, o.edges);
+					}
+
+					if(o.useEndEdge) {
+						var end = Math.min(o.edges, interval.start);
+						for (i = end - 1; i >= 0; i--) {
+							methods._appendItem.call(this, i);
+						}
+					}
+				}
+			}
+
+			// Generate Next link (unless option is set for at front)
+			if (o.nextText && !o.nextAtFront) {
+				methods._appendItem.call(this, !o.invertPageOrder ? o.currentPage + 1 : o.currentPage - 1, {text: o.nextText, classes: 'next'});
+			}
+
+			if (o.ellipsePageSet && !o.disabled) {
+				methods._ellipseClick.call(this, $panel);
+			}
+
+		},
+
+		_getPages: function(o) {
+			var pages = Math.ceil(o.items / o.itemsOnPage);
+			return pages || 1;
+		},
+
+		_getInterval: function(o) {
+			return {
+				start: Math.ceil(o.currentPage > o.halfDisplayed ? Math.max(Math.min(o.currentPage - o.halfDisplayed, (o.pages - o.displayedPages)), 0) : 0),
+				end: Math.ceil(o.currentPage > o.halfDisplayed ? Math.min(o.currentPage + o.halfDisplayed, o.pages) : Math.min(o.displayedPages, o.pages))
+			};
+		},
+
+		_appendItem: function(pageIndex, opts) {
+			var self = this, options, $link, o = self.data('pagination'), $linkWrapper = $('<li></li>'), $ul = self.find('ul');
+
+			pageIndex = pageIndex < 0 ? 0 : (pageIndex < o.pages ? pageIndex : o.pages - 1);
+
+			options = {
+				text: pageIndex + 1,
+				classes: ''
+			};
+
+			if (o.labelMap.length && o.labelMap[pageIndex]) {
+				options.text = o.labelMap[pageIndex];
+			}
+
+			options = $.extend(options, opts || {});
+
+			if (pageIndex == o.currentPage || o.disabled) {
+				if (o.disabled || options.classes === 'prev' || options.classes === 'next') {
+					$linkWrapper.addClass('disabled');
+				} else {
+					$linkWrapper.addClass('active');
+				}
+				$link = $('<span class="current">' + (options.text) + '</span>');
+			} else {
+				if (o.useAnchors) {
+					$link = $('<a href="' + o.hrefTextPrefix + (pageIndex + 1) + o.hrefTextSuffix + '" class="page-link">' + (options.text) + '</a>');
+				} else {
+					$link = $('<span >' + (options.text) + '</span>');
+				}
+				$link.click(function(event){
+					return methods._selectPage.call(self, pageIndex, event);
+				});
+			}
+
+			if (options.classes) {
+				$link.addClass(options.classes);
+			}
+
+			$linkWrapper.append($link);
+
+			if ($ul.length) {
+				$ul.append($linkWrapper);
+			} else {
+				self.append($linkWrapper);
+			}
+		},
+
+		_selectPage: function(pageIndex, event) {
+			var o = this.data('pagination');
+			o.currentPage = pageIndex;
+			if (o.selectOnClick) {
+				methods._draw.call(this);
+			}
+			return o.onPageClick(pageIndex + 1, event);
+		},
+
+
+		_ellipseClick: function($panel) {
+			var self = this,
+				o = this.data('pagination'),
+				$ellip = $panel.find('.ellipse');
+			$ellip.addClass('clickable').parent().removeClass('disabled');
+			$ellip.click(function(event) {
+				if (!o.disable) {
+					var $this = $(this),
+						val = (parseInt($this.parent().prev().text(), 10) || 0) + 1;
+					$this
+						.html('<input type="number" min="1" max="' + o.pages + '" step="1" value="' + val + '">')
+						.find('input')
+						.focus()
+						.click(function(event) {
+							// prevent input number arrows from bubbling a click event on $ellip
+							event.stopPropagation();
+						})
+						.keyup(function(event) {
+							var val = $(this).val();
+							if (event.which === 13 && val !== '') {
+								// enter to accept
+								if ((val>0)&&(val<=o.pages))
+								methods._selectPage.call(self, val - 1);
+							} else if (event.which === 27) {
+								// escape to cancel
+								$ellip.empty().html(o.ellipseText);
+							}
+						})
+						.bind('blur', function(event) {
+							var val = $(this).val();
+							if (val !== '') {
+								methods._selectPage.call(self, val - 1);
+							}
+							$ellip.empty().html(o.ellipseText);
+							return false;
+						});
+				}
+				return false;
+			});
+		}
+
+	};
+
+	$.fn.pagination = function(method) {
+
+		// Method calling logic
+		if (methods[method] && method.charAt(0) != '_') {
+			return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+		} else if (typeof method === 'object' || !method) {
+			return methods.init.apply(this, arguments);
+		} else {
+			$.error('Method ' +  method + ' does not exist on jQuery.pagination');
+		}
+
+	};
+
+})(jQuery);
+;/*! modernizr 3.2.0 (Custom Build) | MIT *
  * http://modernizr.com/download/?-backgroundcliptext-setclasses !*/
 !function(e,n,t){function r(e){var n=_.className,t=Modernizr._config.classPrefix||"";if(x&&(n=n.baseVal),Modernizr._config.enableJSClass){var r=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(r,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),x?_.className.baseVal=n:_.className=n)}function o(e,n){return typeof e===n}function s(){var e,n,t,r,s,i,a;for(var l in C)if(C.hasOwnProperty(l)){if(e=[],n=C[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(r=o(n.fn,"function")?n.fn():n.fn,s=0;s<e.length;s++)i=e[s],a=i.split("."),1===a.length?Modernizr[a[0]]=r:(!Modernizr[a[0]]||Modernizr[a[0]]instanceof Boolean||(Modernizr[a[0]]=new Boolean(Modernizr[a[0]])),Modernizr[a[0]][a[1]]=r),g.push((r?"":"no-")+a.join("-"))}}function i(e,n){return function(){return e.apply(n,arguments)}}function a(e,n,t){var r;for(var s in e)if(e[s]in n)return t===!1?e[s]:(r=n[e[s]],o(r,"function")?i(r,t||n):r);return!1}function l(e,n){return!!~(""+e).indexOf(n)}function f(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):x?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function u(e){return e.replace(/([a-z])-([a-z])/g,function(e,n,t){return n+t.toUpperCase()}).replace(/^-/,"")}function d(e){return e.replace(/([A-Z])/g,function(e,n){return"-"+n.toLowerCase()}).replace(/^ms-/,"-ms-")}function c(){var e=n.body;return e||(e=f(x?"svg":"body"),e.fake=!0),e}function p(e,t,r,o){var s,i,a,l,u="modernizr",d=f("div"),p=c();if(parseInt(r,10))for(;r--;)a=f("div"),a.id=o?o[r]:u+(r+1),d.appendChild(a);return s=f("style"),s.type="text/css",s.id="s"+u,(p.fake?p:d).appendChild(s),p.appendChild(d),s.styleSheet?s.styleSheet.cssText=e:s.appendChild(n.createTextNode(e)),d.id=u,p.fake&&(p.style.background="",p.style.overflow="hidden",l=_.style.overflow,_.style.overflow="hidden",_.appendChild(p)),i=t(d,e),p.fake?(p.parentNode.removeChild(p),_.style.overflow=l,_.offsetHeight):d.parentNode.removeChild(d),!!i}function m(n,r){var o=n.length;if("CSS"in e&&"supports"in e.CSS){for(;o--;)if(e.CSS.supports(d(n[o]),r))return!0;return!1}if("CSSSupportsRule"in e){for(var s=[];o--;)s.push("("+d(n[o])+":"+r+")");return s=s.join(" or "),p("@supports ("+s+") { #modernizr { position: absolute; } }",function(e){return"absolute"==getComputedStyle(e,null).position})}return t}function h(e,n,r,s){function i(){d&&(delete z.style,delete z.modElem)}if(s=o(s,"undefined")?!1:s,!o(r,"undefined")){var a=m(e,r);if(!o(a,"undefined"))return a}for(var d,c,p,h,v,y=["modernizr","tspan"];!z.style;)d=!0,z.modElem=f(y.shift()),z.style=z.modElem.style;for(p=e.length,c=0;p>c;c++)if(h=e[c],v=z.style[h],l(h,"-")&&(h=u(h)),z.style[h]!==t){if(s||o(r,"undefined"))return i(),"pfx"==n?h:!0;try{z.style[h]=r}catch(g){}if(z.style[h]!=v)return i(),"pfx"==n?h:!0}return i(),!1}function v(e,n,t,r,s){var i=e.charAt(0).toUpperCase()+e.slice(1),l=(e+" "+b.join(i+" ")+i).split(" ");return o(n,"string")||o(n,"undefined")?h(l,n,r,s):(l=(e+" "+E.join(i+" ")+i).split(" "),a(l,n,t))}function y(e,n,r){return v(e,t,t,n,r)}var g=[],C=[],w={_version:"3.2.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){C.push({name:e,fn:n,options:t})},addAsyncTest:function(e){C.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=w,Modernizr=new Modernizr;var _=n.documentElement,x="svg"===_.nodeName.toLowerCase(),S="Moz O ms Webkit",b=w._config.usePrefixes?S.split(" "):[];w._cssomPrefixes=b;var E=w._config.usePrefixes?S.toLowerCase().split(" "):[];w._domPrefixes=E;var P={elem:f("modernizr")};Modernizr._q.push(function(){delete P.elem});var z={style:P.elem.style};Modernizr._q.unshift(function(){delete z.style}),w.testAllProps=v,w.testAllProps=y,Modernizr.addTest("backgroundcliptext",function(){return y("backgroundClip","text")}),s(),r(g),delete w.addTest,delete w.addAsyncTest;for(var N=0;N<Modernizr._q.length;N++)Modernizr._q[N]();e.Modernizr=Modernizr}(window,document);;/*
      _ _      _       _
