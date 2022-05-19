@@ -205,6 +205,9 @@
         @include bp($point_5) {
             width: 100%;
         }
+        @include bp($point_5) {
+            margin-top: 5rem;
+        }
     }
     &__body{
         position: absolute;
@@ -408,7 +411,6 @@
         cursor: pointer;
         @include bp($point_2) {
             font-size: 2rem;
-<<<<<<< HEAD
             font-family: $font_2;
         }
         &__card-img {
@@ -419,9 +421,6 @@
         }
         &__row{
             display: flex;
-=======
-            margin-top: 2rem;
->>>>>>> 3c4e45b60ee36c02cca8d064bf4903cbb66eabda
         }
     }
 
@@ -497,6 +496,7 @@
     @include bp($point_3) {
         padding: 20px 10px;
     }
+  
 }
 .footer{
     margin-top: 12rem;
@@ -633,9 +633,15 @@
 }
 .footerLeftCol {
     width: 43%;
+    @include bp($point_4) {
+        width: 100%;
+     }
 }
 .footerRightCol{
     width: 57%;
+    @include bp($point_4) {
+        width: 100%;
+     }
 }
 .light-theme.simple-pagination{
     margin-top: 100px;
